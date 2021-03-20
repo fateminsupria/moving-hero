@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
 
 const Bookings = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser ] = useContext(UserContext); 
+    // setLoggedInUser
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
@@ -15,7 +16,8 @@ const Bookings = () => {
         })
         .then(response => response.json())
         .then( data => setBookings(data))
-    }, [])
+    }, )
+    // []
     return (
         <div>
             <h3>You Have {bookings.length} bookings</h3>
